@@ -1,6 +1,7 @@
 README
 
 To run this app locally:
+
 1) Navigate in your terminal window to the directory where you have the files locally. Use `ls` to see the contents of the currenty directory and `cd` to change directory (e.g. `cd Documents`)  
 2) Make sure you are up-to-date with the remote version by running `git pull`  
 3) Update any dependencies with `bundle install`  
@@ -15,6 +16,7 @@ Note! If you're entering data you want to keep, do it on the heroku app (link to
 
 
 To deploy your local changes to Heroku:
+
 1) check out the list of files you've changes with `git status`  
 2) Add any changes or discard with `git add <file>` or `git checkout -- <file>`. If you deleted a file, you can add that change with `git rm <file>`. If you just want to add all the modified files use `git add .`  
 3) Commit your changes (note that you don't need to put all your changes in one commit - you can do it in multiple if you like) with `git commit -m '<some message>'`  
