@@ -1,0 +1,65 @@
+<%= form_for(@award) do |f| %>
+  <% if @award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@award.errors.count, "error") %> prohibited this award from being saved:</h2>
+
+      <ul>
+      <% @award.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :entry_fee %><br>
+    <%= f.text_field :entry_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :prize %><br>
+    <%= f.text_field :prize %>
+  </div>
+  <div class="field">
+    <%= f.label :deadline %><br>
+    <%= f.date_select :deadline %>
+  </div>
+  <div class="field">
+    <%= f.label :entrant_type %><br>
+    <%= f.text_field :entrant_type %>
+  </div>
+  <div class="field">
+    <%= f.label :medium_type %><br>
+    <%= f.text_field :medium_type %>
+  </div>
+  <div class="field">
+    <%= f.label :content_type %><br>
+    <%= f.text_field :content_type %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_type %><br>
+    <%= f.text_field :subject_type %>
+  </div>
+  <div class="field">
+    <%= f.label :organization_id %><br>
+    <%= f.text_field :organization_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

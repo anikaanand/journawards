@@ -1,0 +1,35 @@
+<newsletter -> mailchimp>
+
+--Winners?
+
+User
+email address
+has favorite awards
+
+
+Award
+has many winners?
+belongs to an org
+
+> users can post, sent to you for approval
+
+Name
+Link to award
+Description
+Notes
+entry fee (complex?)
+Prize
+Deadline
+Entrant type (internal categorization> search refinement)
+Medium type (enum) > may have more than one
+Content type (enum) > loose, more than one
+Subject type (enum) string
+
+
+
+Organization
+has many awards
+Name
+Link to awards page
+
+journawards

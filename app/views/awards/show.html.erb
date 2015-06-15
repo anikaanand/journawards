@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @award.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @award.link %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @award.description %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @award.notes %>
+</p>
+
+<p>
+  <strong>Entry fee:</strong>
+  <%= @award.entry_fee %>
+</p>
+
+<p>
+  <strong>Prize:</strong>
+  <%= @award.prize %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @award.deadline %>
+</p>
+
+<p>
+  <strong>Entrant type:</strong>
+  <%= @award.entrant_type %>
+</p>
+
+<p>
+  <strong>Medium type:</strong>
+  <%= @award.medium_type %>
+</p>
+
+<p>
+  <strong>Content type:</strong>
+  <%= @award.content_type %>
+</p>
+
+<p>
+  <strong>Subject type:</strong>
+  <%= @award.subject_type %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @award.organization %>
+</p>
+
+<%= link_to 'Edit', edit_award_path(@award) %> |
+<%= link_to 'Back', awards_path %>
