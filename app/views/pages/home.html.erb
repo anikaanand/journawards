@@ -1,0 +1,33 @@
+
+<div>
+Search awards by keyword: 
+</div>
+
+
+<div>
+<table>
+  <thead>
+    <tr>
+      <th>Most Recently Posted Awards</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recent_awards.each do |award| %>
+      <tr>
+        <td><%= link_to award.name , award %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Show More', awards_path %>
+</div>
+
+<div>
+Be the first to know about upcoming awards:
+</div>
+
+<div>
+    <% @featured_awards.each do |award| %>
+      <div><%= link_to award.name , award %></div>
+    <% end %>
+</div>
