@@ -1,64 +1,41 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Award -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @award.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @award.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:link) %>:</strong></dt>
+  <dd><%= @award.link %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @award.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:notes) %>:</strong></dt>
+  <dd><%= @award.notes %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:entry_fee) %>:</strong></dt>
+  <dd><%= @award.entry_fee %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:prize) %>:</strong></dt>
+  <dd><%= @award.prize %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:deadline) %>:</strong></dt>
+  <dd><%= @award.deadline %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:entrant_type) %>:</strong></dt>
+  <dd><%= @award.entrant_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:medium_type) %>:</strong></dt>
+  <dd><%= @award.medium_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:content_type) %>:</strong></dt>
+  <dd><%= @award.content_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:subject_type) %>:</strong></dt>
+  <dd><%= @award.subject_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:organization_id) %>:</strong></dt>
+  <dd><%= @award.organization_id %></dd>
+</dl>
 
-<p>
-  <strong>Link:</strong>
-  <%= @award.link %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @award.description %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @award.notes %>
-</p>
-
-<p>
-  <strong>Entry fee:</strong>
-  <%= @award.entry_fee %>
-</p>
-
-<p>
-  <strong>Prize:</strong>
-  <%= @award.prize %>
-</p>
-
-<p>
-  <strong>Deadline:</strong>
-  <%= @award.deadline %>
-</p>
-
-<p>
-  <strong>Entrant type:</strong>
-  <%= @award.entrant_type %>
-</p>
-
-<p>
-  <strong>Medium type:</strong>
-  <%= @award.medium_type %>
-</p>
-
-<p>
-  <strong>Content type:</strong>
-  <%= @award.content_type %>
-</p>
-
-<p>
-  <strong>Subject type:</strong>
-  <%= @award.subject_type %>
-</p>
-
-<p>
-  <strong>Organization:</strong>
-  <%= @award.organization %>
-</p>
-
-<%= link_to 'Edit', edit_award_path(@award) %> |
-<%= link_to 'Back', awards_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              awards_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_award_path(@award), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              award_path(@award),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
