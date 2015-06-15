@@ -64,15 +64,20 @@
           <%= yield %>
         </div>
       </div><!--/row-->
+    </div> <!-- /container -->
 
-      <footer>
+      <footer class="footer">
+      <div class="container">
+        <%= link_to "Home", pages_home_path %>
       	<%= link_to "Awards", awards_path %>
       	<%= link_to "Organizations", organizations_path %>
       	<%= link_to "Users", users_path %>
+      	<%= link_to "About", pages_about_path %>
         <p>&copy; Journawards 2015</p>
+      </div>
       </footer>
 
-    </div> <!-- /container -->
+
 
   </body>
 </html>
