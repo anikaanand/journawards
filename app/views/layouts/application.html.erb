@@ -7,7 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+			<%= link_to image_tag("logo.png", alt: "Journawards home"), '#' %>
+            <%= link_to "About Us",   '#' %>
+            <%= link_to image_tag("fb.jpg", alt: "Like us on Facebook"), 'https://facebook.com/' %>
+            <%= link_to image_tag("twitter.png", alt: "Follow us on Twitter"), 'https://twitter.com/' %>
+            <%= link_to "Users", users_path %>
+            <%= link_to "Organizations", organizations_path %>   
+            <%= link_to "Awards", awards_path %>  
+            <%= link_to "Post an Award", new_award_path %>
+      </div>
+    </header>
 <%= yield %>
 
 </body>
