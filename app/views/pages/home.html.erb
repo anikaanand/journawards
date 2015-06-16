@@ -1,10 +1,21 @@
 
-<div>
-Search awards by keyword: 
+<div class="container-fluid">
+
+<div class="row">
+	<div>
+		<%= form_tag awards_path, :method => :get do %>
+		  <p> Search awards by keyword:
+		    <%= text_field_tag :search, params[:search] %>
+		    <%= submit_tag "Search", :name => nil, class: 'btn btn-primary' %>
+		  </p>
+		<% end %>
+	</div>
+	<%= link_to "View All Awards", awards_path, class: 'btn' %>
+	<%= link_to "Advanced Search", awards_path, class: 'btn' %>
 </div>
 
 
-<div>
+<div class="col-md-6">
 <table>
   <thead>
     <tr>
@@ -19,15 +30,19 @@ Search awards by keyword:
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Show More', awards_path %>
+<%= link_to 'Show More', awards_path, class: 'btn' %>
 </div>
 
-<div>
-Be the first to know about upcoming awards:
+<div class="col-md-6">
+	<div class="row">
+		Be the first to know about upcoming awards:
+	</div>
+
+	<div class="row">
+	    <% @featured_awards.each do |award| %>
+	      <div><%= link_to award.name , award %></div>
+	    <% end %>
+	</div>
 </div>
 
-<div>
-    <% @featured_awards.each do |award| %>
-      <div><%= link_to award.name , award %></div>
-    <% end %>
 </div>

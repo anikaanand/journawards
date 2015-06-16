@@ -22,4 +22,15 @@ To deploy your local changes to Heroku:
 3) Commit your changes (note that you don't need to put all your changes in one commit - you can do it in multiple if you like) with `git commit -m '<some message>'`  
 4) Push your changes to github `git push origin master`  
 5) Push your changes to heroku `git push heroku master` (that will take a minute)  
-6) If you played around with the database schema or anything really substantial, it might be worth migrating the database in heroku `heroku run rake db:migration`  
+6) If you played around with the database schema or anything really substantial, it might be worth migrating the database in heroku `heroku run rake db:migration` 
+
+
+When you add content, make sure to re-index the search by running in terminal
+(if you're editing the local db)   
+`rake sunspot:reindex`
+
+if this complains, you might need to also run `rake sunspot:solr:start`
+
+That should all happen automatically on Heroku, but if you're seeing strange stuff, try:     
+`heroku run rake sunspot:solr:start`  
+`heroku run rake sunspot:reindex`

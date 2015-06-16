@@ -4,7 +4,14 @@ class AwardsController < ApplicationController
   # GET /awards
   # GET /awards.json
   def index
-    @awards = Award.all
+    @search = Award.search do 
+      fulltext params[:search]
+    end
+    if params[:search].blank?
+      @awards = Award.all
+    else
+      @awards = @search.results
+    end
   end
 
   # GET /awards/1
