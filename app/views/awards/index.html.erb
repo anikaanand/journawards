@@ -5,9 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:link) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:notes) %></th>
       <th><%= model_class.human_attribute_name(:entry_fee) %></th>
@@ -18,16 +16,13 @@
       <th><%= model_class.human_attribute_name(:content_type) %></th>
       <th><%= model_class.human_attribute_name(:subject_type) %></th>
       <th><%= model_class.human_attribute_name(:organization_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @awards.each do |award| %>
       <tr>
-        <td><%= link_to award.id, award_path(award) %></td>
-        <td><%= award.name %></td>
-        <td><%= award.link %></td>
+        <td><%= link_to award.name, award_path(award) %></td>
         <td><%= award.description %></td>
         <td><%= award.notes %></td>
         <td><%= award.entry_fee %></td>
@@ -38,7 +33,6 @@
         <td><%= award.content_type %></td>
         <td><%= award.subject_type %></td>
         <td><%= award.organization_id %></td>
-        <td><%=l award.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_award_path(award), :class => 'btn btn-default btn-xs' %>

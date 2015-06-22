@@ -31,6 +31,9 @@ gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem "less-rails"
 
+# search stuff
+gem "algoliasearch-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
