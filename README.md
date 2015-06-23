@@ -20,4 +20,13 @@ To deploy your local changes to Heroku:
 3. Commit your changes (note that you don't need to put all your changes in one commit - you can do it in multiple if you like) with `git commit -m '<some message>'`  
 4. Push your changes to github `git push origin master`  
 5. Push your changes to heroku `git push heroku master` (that will take a minute)  
-6. If you played around with the database schema or anything really substantial, it might be worth migrating the database in heroku `heroku run rake db:migration`  
+6. If you played around with the database schema or anything really substantial, it might be worth migrating the database in heroku `heroku run rake db:migrate`  
+
+
+
+More notes!
+* Once again, make sure you're putting any actual awards records in the site running in Heroku. Otherwise they're liable to get lost.
+* Records entered in Heroku might show up mysteriously in your locally running version of the app when you search or look at the 'articles' page - that's OK. You won't be able to edit them or anything there, though; you'll need to go back to the app on Heroku.
+* You can edit the css stylesheets in app/assets/stylesheets/
+* All of the actual pages (and templates) are in app/views/ and the template for the reused elements (the nav header and footer) is app/views/templates/application.html.erb
+* Anything you do locally to the stylesheets and layouts can always be undone if you don't like it, so definitely play around with it!
