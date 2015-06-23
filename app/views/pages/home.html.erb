@@ -1,9 +1,14 @@
 
-<div>
-Search awards by keyword: 
-</div>
-<div>
-<%= link_to 'View all Awards', awards_path %>
+<div class="row">
+  <div>
+    <%= form_tag awards_path, :method => :get do %>
+      <p> Search awards by keyword:
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil, class: 'btn btn-primary' %>
+        <%= link_to "View All Awards", awards_path, class: 'btn' %>
+      </p>
+    <% end %>
+  </div>
 </div>
 
 <div>
