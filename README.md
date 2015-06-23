@@ -1,6 +1,6 @@
 README
 
-**Note! If you're entering data you want to keep, do it on the heroku app (link to come). That's a different database than the test one you'll run locally. Use your local copy of the app to do things like change the layout, edit page copy, etc.**
+**Note! If you're entering data you want to keep, do it on the [heroku app](https://cryptic-wave-8995.herokuapp.com). That's a different database than the test one you'll run locally. Use your local copy of the app to do things like change the layout, edit page copy, etc.**
 
 To run this app locally:
 
