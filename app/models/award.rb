@@ -3,7 +3,7 @@ class Award < ActiveRecord::Base
   
   belongs_to :organization
 
-  algoliasearch if: approved do
+  algoliasearch if: :approved do
   	attribute :name, :description, :notes, :entry_fee, :prize, :deadline, :entrant_type, :medium_type, :content_type, :subject_type
 
   	attribute :organization do
